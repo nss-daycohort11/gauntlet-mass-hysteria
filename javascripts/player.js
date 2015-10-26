@@ -1,6 +1,6 @@
 /*
   Define the base object for any player of Gauntlet,
-  whether a human player or a monster.
+  whether a human player or a Villian.
  */
 var Player = function(name) {
   this.species = null;
@@ -67,20 +67,20 @@ var Human = function() {
   randomSkin = Math.round(Math.random() * (this.skinColors.length-1));
   this.skinColor = this.skinColors[randomSkin];
 
-  this.allowedClasses = ["Warrior", "Berserker", "Valkyrie", "Monk"];
+  this.allowedClasses = ["Buzz", "Jessie", "Woody", "Barbie"];
 };
 Human.prototype = new Player();
 
 
 /*
-  Define the base properties for a monster in a 
+  Define the base properties for a Villian in a 
   constructor function.
  */
-var Monster = function() {
+var Villian = function() {
   this.health = this.health - 30;
   this.intelligence = this.intelligence -20;
   this.strength = this.strength + 30;
 };
 
-Monster.prototype = new Player();
+Villian.prototype = new Player();
 

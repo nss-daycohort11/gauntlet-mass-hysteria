@@ -13,102 +13,95 @@ var PlayerClass = function() {
   }
 };
 
-/*
-    FIGHTER CLASSES
-      - Warrior
-      - Valkyrie
-      - Berserker
-      - Monk
- */
-var Fighter = function() {
+var Human = function() {
   this.healthBonus = 20;
   this.strengthBonus = 10;
 };
-Fighter.prototype = new PlayerClass();
+Human.prototype = new PlayerClass();
 
 
-var Warrior = function() {
-  this.name = "Warrior";
+var Buzz = function() {
+  this.name = "Buzz";
   this.healthBonus = this.healthBonus + 25;
   this.strengthBonus = this.strengthBonus + 30;
 };
-Warrior.prototype = new Fighter();
+Buzz.prototype = new Human();
 
 
-var Valkyrie = function() {
-  this.name = "Valkyrie";
+var Woody = function() {
+  this.name = "Woody";
   this.healthBonus = this.healthBonus + 20;
   this.strengthBonus = this.strengthBonus + 10;
 };
-Valkyrie.prototype = new Fighter();
+Woody.prototype = new Human();
 
 
-var Berserker = function() {
-  this.name = "Berserker";
+var Jessie = function() {
+  this.name = "Jessie";
   this.healthBonus = this.healthBonus + 35;
   this.strengthBonus = this.strengthBonus + 20;
 };
-Berserker.prototype = new Fighter();
+Jessie.prototype = new Human();
 
 
-var Monk = function() {
-  this.name = "Monk";
+var Barbie = function() {
+  this.name = "Barbie";
   this.healthBonus = this.healthBonus + 10;
   this.strengthBonus = this.strengthBonus + 40;
 };
-Monk.prototype = new Fighter();
+Barbie.prototype = new Human();
 
 
 /*
-    MAGICAL CLASSES
-      - Shaman
-      - Wizard
-      - Conujurer
-      - Sorcerer
+    ANIMAL CLASSES
+      - Rex
+      - Ham
+      - Slinky
+      - Bullseye
  */
-var Mage = function() {
-  this.name = "Mage";
+var Animal = function() {
+  this.name = "Amimal";
   this.magical = true;
   this.healthBonus = this.healthBonus - 10;
   this.strengthBonus = this.strengthBonus - 20;
   this.intelligenceBonus = this.intelligenceBonus + 20;
 };
-Mage.prototype = new PlayerClass();
+Animal.prototype = new PlayerClass();
 
 
-var Shaman = function() {
-  this.name = "Shaman";
+var Rex = function() {
+  this.name = "Rex";
   this.healthBonus = this.healthBonus + 5;
   this.strengthBonus = this.strengthBonus - 10;
   this.intelligenceBonus = this.intelligenceBonus + 20;
 };
-Shaman.prototype = new Mage();
+Rex.prototype = new Animal();
 
 
-var Wizard = function() {
-  this.name = "Wizard";
+var Hamm = function() {
+  this.name = "Hamm";
   this.healthBonus = this.healthBonus - 15;
   this.strengthBonus = this.strengthBonus - 25;
   this.intelligenceBonus = this.intelligenceBonus + 40;
 };
-Wizard.prototype = new Mage();
+Hamm.prototype = new Animal();
 
 
-var Conjurer = function() {
-  this.name = "Conjurer";
+var Slinky = function() {
+  this.name = "Slinky";
   this.strengthBonus = this.strengthBonus - 10;
   this.intelligenceBonus = this.intelligenceBonus + 10;
 };
-Conjurer.prototype = new Mage();
+Slinky.prototype = new Animal();
 
 
-var Sorcerer = function() {
-  this.name = "Sorcerer";
+var Bullseye = function() {
+  this.name = "Bullseye";
   this.healthBonus = this.healthBonus - 5;
   this.strengthBonus = this.strengthBonus - 20;
   this.intelligenceBonus = this.intelligenceBonus + 30;
 };
-Sorcerer.prototype = new Mage();
+Bullseye.prototype = new Animal();
 
 
 /*
