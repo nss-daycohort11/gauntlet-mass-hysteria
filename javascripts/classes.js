@@ -39,6 +39,13 @@ var Woody = function() {
 };
 Woody.prototype = new Human();
 
+var BoPeep = function() {
+  this.name = "BoPeep";
+  this.healthBonus = this.healthBonus + 20;
+  this.strengthBonus = this.strengthBonus + 10;
+};
+BoPeep.prototype = new Human();
+
 
 var Jessie = function() {
   this.name = "Jessie";

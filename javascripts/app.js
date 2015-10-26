@@ -41,6 +41,8 @@ $(document).ready(function() {
       case "card--class":
         moveAlong = ($("#player-name").val() !== "");
         break;
+         $(".card").hide();
+      $("." + nextCard).show();
       case "card--weapon":
         moveAlong = ($("#player-name").val() !== "");
         break;
