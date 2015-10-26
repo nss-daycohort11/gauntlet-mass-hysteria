@@ -41,8 +41,6 @@ $(document).ready(function() {
       case "card--class":
         moveAlong = ($("#player-name").val() !== "");
         break;
-         $(".card").hide();
-      $("." + nextCard).show();
       case "card--weapon":
         moveAlong = ($("#player-name").val() !== "");
         break;
@@ -63,4 +61,13 @@ $(document).ready(function() {
     $("." + previousCard).show();
   });
 
+  var battle = $(".record");
+  //function which records something in the battle record div, this will be used MANY TIMES later on. It takes an html string (string), and another string which will be a class name (css) so that I can make the rows in the battle record look different.
+  var record = function (string, css) {
+    battle.append("<div class='" + css + "'>" + string + "</div>")
+
+
+
+
 });
+

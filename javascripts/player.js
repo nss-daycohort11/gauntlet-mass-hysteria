@@ -15,6 +15,25 @@ var Player = function(name) {
   this.strength = 90;
   this.intelligence = 90;
 
+  this.attack = function () {
+  if (this.id === "player") {
+    villian.health -= this.damage();
+  } else {
+    Hero.health -= this.damage();
+  }
+
+  this.damage = function () {
+      var damage = Math.floor(Math.random() * 14)
+      return damage
+    }
+    
+
+}
+
+
+
+
+
   this.toString = function() {
     var output = [this.playerName,
       ": a ",
