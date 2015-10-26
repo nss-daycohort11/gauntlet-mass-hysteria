@@ -3,12 +3,14 @@ $(document).ready(function() {
   /*
     Test code to generate a human player and an sid player
    */
+  console.log(Human);
   var buzz = new Human();
+  console.log(buzz)
   buzz.setWeapon(new WarAxe());
   buzz.generateClass();  // This will be used for "Surprise me" option
   console.log(buzz.toString());
 
-  var sid = new sid();
+  var sid = new Villian();
   sid.generateClass();
   sid.setWeapon(new BroadSword());
   console.log(sid.toString());

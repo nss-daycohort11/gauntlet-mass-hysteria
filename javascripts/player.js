@@ -46,7 +46,7 @@ Player.prototype.generateClass = function() {
   var randomClass = this.allowedClasses[random];
 
   // Composes the corresponding player class into the player object
-  this.class = new window[randomClass]();
+  this.class = randomClass;
 
   // Add the health bonus
   this.health += this.class.healthBonus;
@@ -57,10 +57,10 @@ Player.prototype.generateClass = function() {
   Define the base properties for a human in a 
   constructor function.
  */
-var Human = function() {
+var Hero = function() {
   var randomSkin;
 
-  this.species = "Human";
+  this.species = "Hero";
   this.intelligence = this.intelligence + 20;
 
   this.skinColors.push("brown", "red", "white", "disease");
@@ -69,7 +69,7 @@ var Human = function() {
 
   this.allowedClasses = ["Buzz", "Jessie", "Woody", "Barbie"];
 };
-Human.prototype = new Player();
+Hero.prototype = new Player();
 
 
 /*
@@ -80,6 +80,7 @@ var Villian = function() {
   this.health = this.health - 30;
   this.intelligence = this.intelligence -20;
   this.strength = this.strength + 30;
+  this.allowedClasses = ["Sid", "Lotso", "Stinky Pete", "Pixar Lawyers"];
 };
 
 Villian.prototype = new Player();

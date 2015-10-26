@@ -1,7 +1,7 @@
 /*
   Base function for a player, or enemy, class (profession)
  */
-var PlayerClass = function() {
+var Toy = function() {
   this.name = "Beggar";
   this.healthBonus = 0;
   this.strengthBonus = 0;
@@ -13,11 +13,15 @@ var PlayerClass = function() {
   }
 };
 
+
+
+Toy.prototype = new Hero();
+
 var Human = function() {
   this.healthBonus = 20;
   this.strengthBonus = 10;
 };
-Human.prototype = new PlayerClass();
+Human.prototype = new Toy();
 
 
 var Buzz = function() {
@@ -66,7 +70,7 @@ var Animal = function() {
   this.strengthBonus = this.strengthBonus - 20;
   this.intelligenceBonus = this.intelligenceBonus + 20;
 };
-Animal.prototype = new PlayerClass();
+Animal.prototype = new Toy();
 
 
 var Rex = function() {
