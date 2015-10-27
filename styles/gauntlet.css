@@ -121,7 +121,6 @@ body {
   float: right;
 }
 
-<<<<<<< HEAD
 #grayedOut.disable {
   background-color: grey;
   box-shadow: none;
@@ -131,7 +130,7 @@ body {
 #buttonrow > div {
   float: left;
 }
-=======
+
 #insiderow div:first-child {
   margin-top: 0;
 }
@@ -144,16 +143,17 @@ body {
   margin: 0 auto;
   width: 90%;
   text-align: center;
+}
 
-/*#grayedOut.disable {
+#grayedOut.disable {
   background-color: grey;
   box-shadow: none;
   border: 0;
 
+}
 #buttonrow > div {
   float: left;
-}*/
->>>>>>> origin
+}
 
 .btn {
   text-decoration: none;
