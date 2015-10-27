@@ -3,23 +3,23 @@ $(document).ready(function() {
   /*
     Test code to generate a human player and an sid player
    */
-  console.log(Human);
-  var buzz = new Human();
-  console.log(buzz)
-  buzz.setWeapon(new WarAxe());
-  buzz.generateClass();  // This will be used for "Surprise me" option
-  console.log(buzz.toString());
+  // console.log(Human);
+  var activeHero = new Hero();
+  // console.log(buzz)
+  activeHero.setWeapon(new WarAxe());
+  activeHero.generateClass();  // This will be used for "Surprise me" option
+  // console.log(buzz.toString());
 
-  var sid = new Villian();
-  sid.generateClass();
-  sid.setWeapon(new BroadSword());
-  console.log(sid.toString());
+  var activeVillian = new Villian();
+  activeVillian.generateClass();
+  activeVillian.setWeapon(new BroadSword());
+  // console.log(sid.toString());
 
   /*
     Test code to generate a spell
    */
   var spell = new Sphere();
-  console.log("spell: ", spell.toString());
+  // console.log("spell: ", spell.toString());
 
 
   /*
@@ -83,10 +83,22 @@ $(document).ready(function() {
 
 
  $("#attack-button").click(function(e){
-  var hDamage ="";
-  var vDamage ="";
-  var battlestring =""; 
-  $("#battleground").append("<div class='" + "'>" + battlestring + "asdfasdf</div>");
+  var x = Math.random();
+  console.log(x);
+  if (0<x<.33){
+    $("#battleground").append("<div class='" + "'> Your health has been reduced to" + activeHero.healthBonus.value + "</div><div class='" + "'> You failed to injure the enemy. Their health remains strong at " + activeVillian.healthBonus.value + "</div>");
+  }
+  else if (.33<x<.66){
+    $("#battleground").append("<div class='" + "'> The weakness of the enemy prevails. Your health remains" + activeHero.healthBonus.value + "</div><div class='" + "'> Your pathetic enemy's health has been reduced to " + activeVillian.healthBonus.value + "</div>");
+  }
+  else if (x>.66){
+    var hDamage = 2;
+    var vDamage = 2;
+    activeHero.healthBonus = activeHero.healthBonus - hDamage;
+    activeVillian.healthBonus = activeVillian.healthBonus - hDamage;
+    var battlestring =""; 
+    $("#battleground").append("<div class='" + "'> Your health has been reduced to" + activeHero.healthBonus.value + "</div><div class='" + "'> Your enemy's health has been reduced to " + activeVillian.healthBonus.value + "</div>");
+  }
 
 });
 });
