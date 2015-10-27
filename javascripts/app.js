@@ -96,16 +96,16 @@ $(document).ready(function() {
       // console.log(x.healthBonus);
     if (0 < y < .33){
       currentHHealth = currentHHealth - hDamage;
-      $("#battleground").append("<div class='" + "'> Your health has been reduced to " + activeHero.healthBonus + "</div><div class='" + "'> You failed to injure the enemy. Their health remains strong at " + currentVHealth);
+      $("#battletext").append("<div class='" + "'> Your health has been reduced to " + activeHero.healthBonus + "</div><div class='" + "'> You failed to injure the enemy. Their health remains strong at " + currentVHealth);
     }
     else if (.33 < y < .66){
       currentVHealth = currentVHealth - vDamage;
-      $("#battleground").append("<div class='" + "'> The weakness of the enemy prevails. Your health remains " + currentHHealth + "</div><div class='" + "'> Your pathetic enemy's health has been reduced to " +currentVHealth);
+      $("#battletext").append("<div class='" + "'> The weakness of the enemy prevails. Your health remains " + currentHHealth + "</div><div class='" + "'> Your pathetic enemy's health has been reduced to " +currentVHealth);
     }
     else if (y > .66){
       currentHHealth = currentHHealth - hDamage;
       currentVHealth = currentVHealth - vDamage;
-      $("#battleground").append("<div class='" + "'> Your health has been reduced to " + currentHHealth+ "</div><div class='" + "'> Your enemy's health has been reduced to " + currentVHealth);
+      $("#battletext").append("<div class='" + "'> Your health has been reduced to " + currentHHealth+ "</div><div class='" + "'> Your enemy's health has been reduced to " + currentVHealth);
     }
 
 });
@@ -127,6 +127,7 @@ var numClicks = 3
 
   } else {
     hideButton.hide();
+  }
  
 });
 
@@ -138,7 +139,7 @@ hideButton.click(function(e) {
   currentHHealth = recoverHealth + currentHHealth;
   console.log (currentHHealth);
 
-        $("#battleground").append("<div class='" + "'> You've regained 5 health points, your current health is now " + currentHHealth + "</div><div class='" + "'> You now have " + numClicks + " hides left </div>");
+        $("#battletext").append("<div class='" + "'> You've regained 5 health points, your current health is now " + currentHHealth + "</div><div class='" + "'> You now have " + numClicks + " hides left </div>");
 
 
   });
