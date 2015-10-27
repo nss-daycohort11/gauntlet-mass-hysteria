@@ -62,7 +62,7 @@ $(document).ready(function() {
   $(".choice").click(function(e) {
     var x = new window[$(this).children()[1].innerHTML]();
     console.log(x);
-    var message = "<div> My character is " + x.name + " I have " + x.healthBonus + " health points" + " I also have " + x.strengthBonus + " strength" + "</div>";
+    var message = "<div><h1>" + x.name + "</h1><p>Woody has " + x.healthBonus + " health points." + " He also has " + x.strengthBonus + " strength. To save strength and restore some health, you can choose to hide, but remember ... you only have three hides to use!</p></div>";
     console.log(message);
     $("#printMessage").append(message);
   });
