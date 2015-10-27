@@ -133,7 +133,15 @@ body {
   margin: 0 auto;
   width: 90%;
   text-align: center;
-}
+
+/*#grayedOut.disable {
+  background-color: grey;
+  box-shadow: none;
+  border: 0;
+
+#buttonrow > div {
+  float: left;
+}*/
 
 .btn {
   text-decoration: none;
