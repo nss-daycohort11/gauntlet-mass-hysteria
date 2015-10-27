@@ -112,26 +112,37 @@ $(document).ready(function() {
 
 
 var hideButton = $('#hide-button')
+
+var numClicks = 3
  
+// Limit number of clicks on hide to 3
+
  hideButton.click(function(e) {
   var tally = ($(this).data('clicks') || 0) + 1;
+  numClicks = numClicks - 1;
+  console.log(numClicks);
   if ( tally < 3 ) {
     $(this).data('clicks', tally);
     console.log(tally);
+
   } else {
-  $("#grayedOut").prop("disabled", true);
-  $("#grayedOut").addClass("disable");
-  }
+    hideButton.hide();
+ 
 });
 
+ // Determines gained health, adds to current health and notifies player
+
 hideButton.click(function(e) {
+  console.log(currentHHealth);
   var recoverHealth = 5;
-  // var addHealth = new window[$(this).healthBonus() + recoverHealth;
-  console.log (recoverHealth);
-});
-  // var recoverHealth = $(this.healthBonus) + 5;
-  // var notification = "<div>You have gained 5 health points back.  You now have </div>";
-  // console.log(recoverHealth);
+  currentHHealth = recoverHealth + currentHHealth;
+  console.log (currentHHealth);
+
+        $("#battleground").append("<div class='" + "'> You've regained 5 health points, your current health is now " + currentHHealth + "</div><div class='" + "'> You now have " + numClicks + " hides left </div>");
+
+
+  });
+
 
  });
 
