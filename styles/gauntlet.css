@@ -13,9 +13,9 @@ body {
   font-size: 3em;
 }
 
-#game-container {
+/*#game-container {
   padding-top: 300px;
-}
+}*/
 
 .field {
   margin: 20px 0 0 0;
@@ -50,9 +50,22 @@ body {
   text-transform: uppercase;
 }
 
+.card__prompt > img {
+  width: 400px;
+  margin: 40px;
+}
+
 .white {
   color: #fff;
   text-shadow: 0 1px 5px #000;
+}
+
+.blackbox {
+  background-color: rgba(0,0,0,0.4);
+  border-radius: 10px;
+  padding: 10px 0 30px;
+  width: 70%;
+  margin: 0 auto;
 }
 
 .card__button {
@@ -102,11 +115,12 @@ body {
   font-size: 28px;
   padding: 10px;
   font-weight: 400;
+  box-shadow: 0 5px 8px rgba(0,0,0,0.5);
 }
 
 .btn--small {
-  min-width: 50px;
-  padding-left: 40px;
+  min-width: 150px;
+  padding-left: 10px 0 10px 10px;
 }
 
 .btn__prompt {
