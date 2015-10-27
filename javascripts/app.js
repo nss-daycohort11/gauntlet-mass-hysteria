@@ -4,7 +4,7 @@ $(document).ready(function() {
     Test code to generate a human player and an sid player
    */
   // console.log(Human);
-  var activeHero= new Hero();
+  var activeHero = new Hero();
   // console.log(buzz)
   activeHero.setWeapon(new WarAxe());
   // x.generateClass();  // This will be used for "Surprise me" option
@@ -14,6 +14,10 @@ $(document).ready(function() {
   activeVillian.generateClass();
   activeVillian.setWeapon(new BroadSword());
   // console.log(sid.toString());
+
+  var currentHHealth = activeHero.health+activeHero.healthBonus;
+  var currentVHealth = activeVillian.health + activeVillian.healthBonus;
+
 
   /*
     Test code to generate a spell
@@ -84,20 +88,20 @@ $(document).ready(function() {
  $("#attack-button").click(function(e){
     var battlestring =""; 
     var y = Math.random();
-    // console.log(x);
+      
       // The two variables below will be modified to reflect a more complex battle algorithm.
       var hDamage = 2;
       var vDamage = 2;
       // console.log(x.healthBonus);
-    if (0<y<.33){
+    if (0 < y < .33){
       activeHero.healthBonus = activeHero.healthBonus - hDamage;
       $("#battleground").append("<div class='" + "'> Your health has been reduced to" + activeHero.healthBonus + "</div><div class='" + "'> You failed to injure the enemy. Their health remains strong at " + activeVillian.healthBonus);
     }
-    else if (.33<y<.66){
+    else if (.33 < y < .66){
       activeVillian.healthBonus = activeVillian.healthBonus - hDamage;
       $("#battleground").append("<div class='" + "'> The weakness of the enemy prevails. Your health remains " + activeHero.healthBonus + "</div><div class='" + "'> Your pathetic enemy's health has been reduced to " + activeVillian.healthBonus);
     }
-    else if (y>.66){
+    else if (y > .66){
       activeHero.healthBonus = activeHero.healthBonus - hDamage;
       activeVillian.healthBonus = activeVillian.healthBonus - hDamage;
       $("#battleground").append("<div class='" + "'> Your health has been reduced to" + activeHero.healthBonus+ "</div><div class='" + "'> Your enemy's health has been reduced to " + activeVillian.healthBonus);
