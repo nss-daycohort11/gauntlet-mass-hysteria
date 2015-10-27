@@ -2,7 +2,7 @@ var Sid = function() {
   this.health = this.health + 20;
   this.species = "Sid";
   this.allowedClasses = ["Buzz", "Jessie", "Rex"];
-
+  
   this.generateClass = function() {
     // Get a random index from the allowed classes array
     var random = Math.round(Math.random() * (this.allowedClasses.length - 1));
