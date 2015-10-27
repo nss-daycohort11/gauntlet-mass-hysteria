@@ -70,6 +70,7 @@ $(document).ready(function() {
     var message = "<img src='images/" + x.name + ".jpg' class='charphoto'><div class='messageText'><h1>" + x.name + "</h1><p>" + x.name + " has the following traits:</p><ul><li>Health: " + x.healthBonus + "</li><li>Strength: " + x.strengthBonus + "</li><li>Weapon of Choice: " + x.weapon + "</li></ul><p>To save strength and restore some health, you can choose to hide, but remember ... you only have three hides to use!</p></div>";
     console.log(message);
     $("#printMessage").html(message);
+    CreateOpponent();
   });
 
 
@@ -85,6 +86,10 @@ $(document).ready(function() {
   });
 
 
+$("#launch-game").click(function(e){
+  $("#battletext").html(Opponent + "strikes! Make your move, player:")
+})
+
 
  $("#attack-button").click(function(e){
     var battlestring =""; 
@@ -94,15 +99,15 @@ $(document).ready(function() {
       var hDamage = 2;
       var vDamage = 2;
       // console.log(x.healthBonus);
-    if (0 < y < .33){
+    if (y < .33){
       currentHHealth = currentHHealth - hDamage;
       $("#battletext").append("<div class='" + "'> Your health has been reduced to " + activeHero.healthBonus + "</div><div class='" + "'> You failed to injure the enemy. Their health remains strong at " + currentVHealth);
     }
-    else if (.33 < y < .66){
+    else if (y < .66){
       currentVHealth = currentVHealth - vDamage;
       $("#battletext").append("<div class='" + "'> The weakness of the enemy prevails. Your health remains " + currentHHealth + "</div><div class='" + "'> Your pathetic enemy's health has been reduced to " +currentVHealth);
     }
-    else if (y > .66){
+    else if (y < 1){
       currentHHealth = currentHHealth - hDamage;
       currentVHealth = currentVHealth - vDamage;
       $("#battletext").append("<div class='" + "'> Your health has been reduced to " + currentHHealth+ "</div><div class='" + "'> Your enemy's health has been reduced to " + currentVHealth);
