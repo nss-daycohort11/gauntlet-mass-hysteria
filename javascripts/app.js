@@ -28,6 +28,8 @@ $(document).ready(function() {
     Show the initial view that accepts player name
    */
   $("#player-setup").show();
+  var playerName = $("#player-name").val();
+
 
   /*
     When any button with card__link class is clicked,
@@ -64,12 +66,11 @@ $(document).ready(function() {
     console.log(x);
     var message = "<img src='images/" + x.name + ".jpg' class='charphoto'><div class='messageText'><h1>" + x.name + "</h1><p>" + x.name + " has " + x.healthBonus + " health points." + " He also has " + x.strengthBonus + " strength. To save strength and restore some health, you can choose to hide, but remember ... you only have three hides to use!</p></div>";
     console.log(message);
-    $("#printMessage").append(message);
+    $("#printMessage").html(message);
   });
 
-// $(".card__hide").click(function(e) {
 
-// })
+
   /*
     When the back button clicked, move back a view
    */
@@ -80,11 +81,14 @@ $(document).ready(function() {
     printMessage.remove(message);
   });
 
-  var battle = $(".record");
-  //function which records something in the battle record div, this will be used MANY TIMES later on. It takes an html string (string), and another string which will be a class name (css) so that I can make the rows in the battle record look different.
-  var record = function (string, css) {
-    battle.append("<div class='" + css + "'>" + string + "</div>");
-  }
 
+
+ $("#attack-button").click(function(e){
+  var hDamage ="";
+  var vDamage ="";
+  var battlestring =""; 
+  $("#battleground").append("<div class='" + "'>" + battlestring + "asdfasdf</div>");
+
+});
 });
 
