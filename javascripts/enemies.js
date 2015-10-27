@@ -1,8 +1,8 @@
 var Sid = function() {
   this.health = this.health + 20;
-  this.species = "Sid";
+  this.name = "Sid";
   this.allowedClasses = ["Buzz", "Jessie", "Rex"];
-  
+
   this.generateClass = function() {
     // Get a random index from the allowed classes array
     var random = Math.round(Math.random() * (this.allowedClasses.length - 1));
@@ -20,7 +20,7 @@ Sid.prototype = new Villian();
 
 var Lotso = function() {
   this.health = this.health + 20;
-  this.species = "Lotso";
+  this.name = "Lotso";
   this.allowedClasses = ["Buzz", "Jessie", "Rex"];
 
   this.generateClass = function() {
@@ -40,7 +40,7 @@ Lotso.prototype = new Villian();
 
 var StinkyPete = function() {
   this.health = this.health + 20;
-  this.species = "StinkyPete";
+  this.name = "StinkyPete";
   this.allowedClasses = ["Buzz", "Jessie", "Rex"];
 
   this.generateClass = function() {
@@ -60,7 +60,7 @@ StinkyPete.prototype = new Villian();
 
 var PixarLawyers = function() {
   this.health = this.health + 20;
-  this.species = "PixarLawyers";
+  this.name = "PixarLawyers";
   this.allowedClasses = ["Buzz", "Jessie", "Rex"];
 
   this.generateClass = function() {
@@ -80,7 +80,7 @@ PixarLawyers.prototype = new Villian();
 
 var Scud = function() {
   this.health = this.health + 20;
-  this.species = "Scud";
+  this.name = "Scud";
   this.allowedClasses = ["Buzz", "Jessie", "Rex"];
 
   this.generateClass = function() {
@@ -100,7 +100,7 @@ Scud.prototype = new Villian();
 
 var Zurg = function() {
   this.health = this.health + 20;
-  this.species = "Scud";
+  this.name = "Scud";
   this.allowedClasses = ["Buzz", "Jessie", "Rex"];
 
   this.generateClass = function() {

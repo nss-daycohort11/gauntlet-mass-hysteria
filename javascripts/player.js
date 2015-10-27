@@ -6,7 +6,7 @@ var Player = function(name) {
   this.species = null;
   this.class = null;
   this.weapon = null;
-  this.name = "Beggar";
+this.name = "Beggar";
   this.healthBonus = 0;
   this.strengthBonus = 0;
   
