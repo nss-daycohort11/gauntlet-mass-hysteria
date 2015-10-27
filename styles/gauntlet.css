@@ -62,6 +62,7 @@ body {
 
 .blackbox {
   background-color: rgba(0,0,0,0.4);
+  border: 3px solid #505050;
   border-radius: 10px;
   padding: 10px 0 30px;
   width: 70%;
@@ -70,10 +71,15 @@ body {
 
 .heading {
   background-color: rgba(0,0,0,0.4);
+  border: 3px solid #505050;
   border-radius: 10px;
   padding: 10px;
   width: 55%;
   margin: 15px auto 10px;
+}
+
+#villianrow {
+  margin: 0;
 }
 
 .card__button {
@@ -86,6 +92,7 @@ body {
   width: 80%;
   margin: 2% auto 0;
   background-color: rgba(0,0,0,0.4);
+  border: 3px solid #505050;
   border-radius: 10px;
   color: #fff;
   padding: 3%;
@@ -94,6 +101,8 @@ body {
 #printMessage > img {
   float: left;
   width: 30%;
+  height: 300px;
+  border: 3px solid #505050;
   background-color: yellow;
 }
 
@@ -121,15 +130,30 @@ body {
   float: right;
 }
 
-
 #grayedOut.disable {
   background-color: grey;
   box-shadow: none;
   border: 0;
 }
 
+
 #buttonrow > div {
   float: left;
+}
+
+#insiderow div:first-child {
+  margin-top: 0;
+}
+
+#insiderow > div {
+  display: inline-block;
+}
+
+#insiderow {
+  margin: 0 auto;
+  width: 90%;
+  text-align: center;
+
 }
 
 .btn {
@@ -166,7 +190,7 @@ body {
 
 .btn--big {
   font-size: 28px;
-  padding: 10px;
+  padding: 10px 15px 10px 10px;
   font-weight: 400;
   box-shadow: 0 5px 8px rgba(0,0,0,0.5);
 }
@@ -183,7 +207,7 @@ body {
   color: #fff;
   padding-right: 12px;
   padding-left: 12px;
-  margin-right: -10px;
+  margin-right: 15px;
   font-weight: 600;
   background-color: #333;
   opacity: .4;
