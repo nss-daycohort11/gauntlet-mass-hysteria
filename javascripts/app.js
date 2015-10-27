@@ -64,8 +64,8 @@ $(document).ready(function() {
   var battle = $(".record");
   //function which records something in the battle record div, this will be used MANY TIMES later on. It takes an html string (string), and another string which will be a class name (css) so that I can make the rows in the battle record look different.
   var record = function (string, css) {
-    battle.append("<div class='" + css + "'>" + string + "</div>")
-
+    battle.append("<div class='" + css + "'>" + string + "</div>");
+  }
 
 
 
