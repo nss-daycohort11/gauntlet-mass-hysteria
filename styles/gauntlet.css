@@ -84,7 +84,7 @@ body {
 
 #printMessage {
   width: 80%;
-  margin: 0 auto;
+  margin: 2% auto 0;
   background-color: rgba(0,0,0,0.4);
   border-radius: 10px;
   color: #fff;
@@ -108,7 +108,7 @@ body {
 .messageText > h1 {
   font-size: 3em;
   font-weight: bold;
-  margin-top: 0;
+  margin: 0 0 20px;
   text-shadow: 0 1px 5px #000;
   text-transform: uppercase;
 }
@@ -121,10 +121,15 @@ body {
   float: right;
 }
 
+<<<<<<< HEAD
 #grayedOut.disable {
   background-color: grey;
   box-shadow: none;
   border: 0;
+=======
+#buttonrow > div {
+  float: left;
+>>>>>>> 73cc91db0d65103fd8db28c838e6169201de0e63
 }
 
 .btn {

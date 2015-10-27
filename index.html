@@ -197,23 +197,26 @@
       <div class="card__prompt">
  <!--        <div>Here's Your Character!</div> -->
         <div id="printMessage"></div>
+      </div>
+
+      <div id="buttonrow">
         <div>
-          <a class="card__back btn btn--small" 
+          <a class="card__back btn btn--big btn--orange" 
              href="#"
              previous="card--class">
             <span class="btn__prompt">&lt;</span>
-            <span class="btn__text">Back</span>
+            <span class="btn__text">Choose A Different Character</span>
           </a>          
         </div>
-      </div>
 
-      <div class="card__button">
-        <a class="card__link btn btn--big btn--orange" 
-           href="#" 
-           next="card--battleground">
-          <span class="btn__prompt">></span>
-          <span class="btn__text">Begin Game</span>
-        </a>
+        <div class="card__button">
+          <a class="card__link btn btn--big btn--orange" 
+             href="#" 
+             next="card--battleground">
+            <span class="btn__prompt">></span>
+            <span class="btn__text">Begin Game</span>
+          </a>
+        </div>
       </div>
     </section>
 
@@ -228,7 +231,7 @@
      	</div>
 		
 
-	 	<div class="card__button">
+	 	<div id= "attack-button" class="card__button">
 	        <a class="card__attack btn btn--big btn--orange" 
 	           href="#" 
 	           next="card--end">
