@@ -121,6 +121,7 @@ body {
   float: right;
 }
 
+<<<<<<< HEAD
 #grayedOut.disable {
   background-color: grey;
   box-shadow: none;
@@ -130,6 +131,29 @@ body {
 #buttonrow > div {
   float: left;
 }
+=======
+#insiderow div:first-child {
+  margin-top: 0;
+}
+
+#insiderow > div {
+  display: inline-block;
+}
+
+#insiderow {
+  margin: 0 auto;
+  width: 90%;
+  text-align: center;
+
+/*#grayedOut.disable {
+  background-color: grey;
+  box-shadow: none;
+  border: 0;
+
+#buttonrow > div {
+  float: left;
+}*/
+>>>>>>> origin
 
 .btn {
   text-decoration: none;
@@ -165,7 +189,7 @@ body {
 
 .btn--big {
   font-size: 28px;
-  padding: 10px;
+  padding: 10px 15px 10px 10px;
   font-weight: 400;
   box-shadow: 0 5px 8px rgba(0,0,0,0.5);
 }
@@ -182,7 +206,7 @@ body {
   color: #fff;
   padding-right: 12px;
   padding-left: 12px;
-  margin-right: -10px;
+  margin-right: 15px;
   font-weight: 600;
   background-color: #333;
   opacity: .4;
