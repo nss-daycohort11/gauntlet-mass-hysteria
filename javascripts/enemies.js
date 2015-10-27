@@ -96,7 +96,7 @@ var Scud = function() {
   }
 };
 
-Zurg.prototype = new Villian();
+Scud.prototype = new Villian();
 
 var Zurg = function() {
   this.health = this.health + 20;

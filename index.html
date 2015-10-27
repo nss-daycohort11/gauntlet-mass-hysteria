@@ -51,21 +51,21 @@
 
           <div class="col-sm-4">
             <div class="card__button">
-              <a class="class__link btn btn--big btn--blue" href="#">
+              <a class="card__link btn btn--big btn--blue choice" href="#" next="card--character">
                 <span class="btn__prompt">></span>
                 <span class="btn__text">Buzz</span>
               </a>
             </div>      
             
             <div class="card__button">
-              <a class="class__link btn btn--big btn--blue" href="#">
+              <a class="card__link btn btn--big btn--blue choice" href="#" next="card--character">
                 <span class="btn__prompt">></span>
                 <span class="btn__text">Barbie</span>
               </a>
             </div>      
             
             <div class="card__button">
-              <a class="class__link btn btn--big btn--blue" href="#">
+              <a class="card__link btn btn--big btn--blue choice" href="#" next="card--character">
                 <span class="btn__prompt">></span>
                 <span class="btn__text">Hamm</span>
               </a>
@@ -74,21 +74,21 @@
 
           <div class="col-sm-4">
             <div class="card__button">
-              <a class="class__link btn btn--big btn--blue" href="#">
+              <a class="card__link btn btn--big btn--blue choice" href="#" next="card--character">
                 <span class="btn__prompt">></span>
                 <span class="btn__text">Woody</span>
               </a>
             </div>
             
             <div class="card__button">
-              <a class="class__link btn btn--big btn--blue" href="#">
+              <a class="card__link btn btn--big btn--blue choice" href="#" next="card--character">
                 <span class="btn__prompt">></span>
                 <span class="btn__text">Slinky</span>
               </a>
             </div>
 
             <div class="card__button">
-              <a class="class__link btn btn--big btn--blue" href="#">
+              <a class="card__link btn btn--big btn--blue choice" href="#" next="card--character">
                 <span class="btn__prompt">></span>
                 <span class="btn__text">Bullseye</span>
               </a>
@@ -97,21 +97,21 @@
 
           <div class="col-sm-4">
             <div class="card__button">
-              <a class="class__link btn btn--big btn--blue" href="#">
+              <a class="card__link btn btn--big btn--blue choice" href="#" next="card--character">
                 <span class="btn__prompt">></span>
                 <span class="btn__text">Jessie</span>
               </a>
             </div>
             
             <div class="card__button">
-              <a class="class__link btn btn--big btn--blue" href="#">
+              <a class="card__link btn btn--big btn--blue choice" href="#" next="card--character">
                 <span class="btn__prompt">></span>
                 <span class="btn__text">Rex</span>
               </a>
             </div>
 
             <div class="card__button">
-              <a class="class__link btn btn--big btn--blue" href="#">
+              <a class="card__link btn btn--big btn--blue choice" href="#" next="card--character">
                 <span class="btn__prompt">></span>
                 <span class="btn__text">Bo Peep</span>
               </a>
@@ -126,14 +126,14 @@
 
           <div class="col-sm-4">
             <div class="card__button">
-              <a class="class__link btn btn--big btn--blue" href="#">
+              <a class="card__link btn btn--big btn--blue choice" href="#" next="card--character">
                 <span class="btn__prompt">></span>
                 <span class="btn__text">Sid</span>
               </a>
             </div>      
             
             <div class="card__button">
-              <a class="class__link btn btn--big btn--blue" href="#">
+              <a class="card__link btn btn--big btn--blue choice" href="#" next="card--character">
                 <span class="btn__prompt">></span>
                 <span class="btn__text">&copy; Lawyers</span>
               </a>
@@ -142,14 +142,14 @@
 
           <div class="col-sm-4">
             <div class="card__button">
-              <a class="class__link btn btn--big btn--blue" href="#">
+              <a class="card__link btn btn--big btn--blue choice" href="#" next="card--character">
                 <span class="btn__prompt">></span>
                 <span class="btn__text">Lotso</span>
               </a>
             </div>
 
             <div class="card__button">
-              <a class="class__link btn btn--big btn--blue" href="#">
+              <a class="card__link btn btn--big btn--blue choice" href="#" next="card--character">
                 <span class="btn__prompt">></span>
                 <span class="btn__text">Zurg</span>
               </a>
@@ -158,14 +158,14 @@
 
           <div class="col-sm-4">
             <div class="card__button">
-              <a class="class__link btn btn--big btn--blue" href="#">
+              <a class="card__link btn btn--big btn--blue choice" href="#" next="card--character">
                 <span class="btn__prompt">></span>
                 <span class="btn__text">Jessie</span>
               </a>
             </div>
 
             <div class="card__button">
-              <a class="class__link btn btn--big btn--blue" href="#">
+              <a class="card__link btn btn--big btn--blue choice" href="#" next="card--character">
                 <span class="btn__prompt">></span>
                 <span class="btn__text">Scud</span>
               </a>
@@ -183,7 +183,7 @@
       </div>
 
       <div class="card__button">
-        <a class="class__link btn btn--big btn--yellow" href="#">
+        <a class="card__ btn btn--big btn--yellow" href="#">
           <span class="btn__prompt">></span>
           <span class="btn__text">surprise me</span>
         </a>
@@ -193,6 +193,7 @@
     <section id="character-details" class="card card--character">
       <div class="card__prompt">
         <div>Here's Your Character!</div>
+        <div id="printMessage"></div>
         <div>
           <a class="card__back btn btn--small" 
              href="#"
@@ -213,7 +214,38 @@
       </div>
     </section>
 
-    <section id="battleground" class="card card--battleground"></section>
+    <section id="battleground" class="card card--battleground">
+   		<div class="card__button">
+	        <a class="card__link btn btn--big btn--orange" 
+	           href="#" 
+	           next="card--end">
+	          <span class="btn__prompt">></span>
+	          <span class="btn__text">End Game</span>
+	        </a>
+     	</div>
+		Hello
+
+	 	<div class="card__button">
+	        <a class="card__attack btn btn--big btn--orange" 
+	           href="#" 
+	           next="card--end">
+	          <span class="btn__prompt">></span>
+	          <span class="btn__text">Attack!</span>
+	        </a>
+     	</div>
+
+
+        <div class="card__button">
+	        <a class="card__hide btn btn--big btn--orange" 
+	           href="#" 
+	           next="card--end">
+	          <span class="btn__prompt">></span>
+	          <span class="btn__text">Hide</span>
+	        </a>
+     	</div>
+	</section>
+
+    <section id="gameOver" class="card card--end">PEACE BITCH!</section>
 
   </article>
 

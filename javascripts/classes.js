@@ -13,8 +13,6 @@ var Toy = function() {
   }
 };
 
-
-
 Toy.prototype = new Hero();
 
 var Human = function() {

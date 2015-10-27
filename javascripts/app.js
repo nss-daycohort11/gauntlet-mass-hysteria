@@ -41,9 +41,16 @@ $(document).ready(function() {
       case "card--class":
         moveAlong = ($("#player-name").val() !== "");
         break;
-      case "card--weapon":
+      case "card--character":
         moveAlong = ($("#player-name").val() !== "");
         break;
+      case "card--battleground":
+        moveAlong = ($("#player-name").val() !== "");
+        break;
+      case "card--end":
+        moveAlong = ($("#player-name").val() !== "");
+        break;
+
     }
 
     if (moveAlong) {
@@ -52,6 +59,17 @@ $(document).ready(function() {
     }
   });
 
+  $(".choice").click(function(e) {
+    var x = new window[$(this).children()[1].innerHTML]();
+    console.log(x);
+    var message = "<div> My character is " + x.name + " I have " + x.healthBonus + " health points" + " I also have " + x.strengthBonus + " strength" + "</div>";
+    console.log(message);
+    $("#printMessage").append(message);
+  });
+
+// $(".card__hide").click(function(e) {
+
+// })
   /*
     When the back button clicked, move back a view
    */
@@ -65,9 +83,6 @@ $(document).ready(function() {
   //function which records something in the battle record div, this will be used MANY TIMES later on. It takes an html string (string), and another string which will be a class name (css) so that I can make the rows in the battle record look different.
   var record = function (string, css) {
     battle.append("<div class='" + css + "'>" + string + "</div>")
-
-
-
-
+}
 });
 
