@@ -127,9 +127,7 @@ var numClicks = 3
 
   } else {
     hideButton.hide();
-  // $("#grayedOut").prop("disabled", true);
-  // $("#grayedOut").addClass("disable");
-  }
+ 
 });
 
  // Determines gained health, adds to current health and notifies player
