@@ -4,10 +4,10 @@ $(document).ready(function() {
     Test code to generate a human player and an sid player
    */
   // console.log(Human);
-  var activeHero = new Hero();
+  var activeHero= new Hero();
   // console.log(buzz)
   activeHero.setWeapon(new WarAxe());
-  activeHero.generateClass();  // This will be used for "Surprise me" option
+  // x.generateClass();  // This will be used for "Surprise me" option
   // console.log(buzz.toString());
 
   var activeVillian = new Villian();
@@ -62,8 +62,7 @@ $(document).ready(function() {
   });
 
   $(".choice").click(function(e) {
-    var x = new window[$(this).children()[1].innerHTML]();
-    console.log(x);
+    var x= new window[$(this).children()[1].innerHTML]();
     var message = "<img src='images/" + x.name + ".jpg' class='charphoto'><div class='messageText'><h1>" + x.name + "</h1><p>" + x.name + " has " + x.healthBonus + " health points." + " He also has " + x.strengthBonus + " strength. To save strength and restore some health, you can choose to hide, but remember ... you only have three hides to use!</p></div>";
     console.log(message);
     $("#printMessage").html(message);
@@ -83,22 +82,26 @@ $(document).ready(function() {
 
 
  $("#attack-button").click(function(e){
-  var x = Math.random();
-  console.log(x);
-  if (0<x<.33){
-    $("#battleground").append("<div class='" + "'> Your health has been reduced to" + activeHero.healthBonus.value + "</div><div class='" + "'> You failed to injure the enemy. Their health remains strong at " + activeVillian.healthBonus.value + "</div>");
-  }
-  else if (.33<x<.66){
-    $("#battleground").append("<div class='" + "'> The weakness of the enemy prevails. Your health remains" + activeHero.healthBonus.value + "</div><div class='" + "'> Your pathetic enemy's health has been reduced to " + activeVillian.healthBonus.value + "</div>");
-  }
-  else if (x>.66){
-    var hDamage = 2;
-    var vDamage = 2;
-    activeHero.healthBonus = activeHero.healthBonus - hDamage;
-    activeVillian.healthBonus = activeVillian.healthBonus - hDamage;
     var battlestring =""; 
-    $("#battleground").append("<div class='" + "'> Your health has been reduced to" + activeHero.healthBonus.value + "</div><div class='" + "'> Your enemy's health has been reduced to " + activeVillian.healthBonus.value + "</div>");
-  }
+    var y = Math.random();
+    // console.log(x);
+      // The two variables below will be modified to reflect a more complex battle algorithm.
+      var hDamage = 2;
+      var vDamage = 2;
+      // console.log(x.healthBonus);
+    if (0<y<.33){
+      activeHero.healthBonus = activeHero.healthBonus - hDamage;
+      $("#battleground").append("<div class='" + "'> Your health has been reduced to" + activeHero.healthBonus + "</div><div class='" + "'> You failed to injure the enemy. Their health remains strong at " + activeVillian.healthBonus);
+    }
+    else if (.33<y<.66){
+      activeVillian.healthBonus = activeVillian.healthBonus - hDamage;
+      $("#battleground").append("<div class='" + "'> The weakness of the enemy prevails. Your health remains " + activeHero.healthBonus + "</div><div class='" + "'> Your pathetic enemy's health has been reduced to " + activeVillian.healthBonus);
+    }
+    else if (y>.66){
+      activeHero.healthBonus = activeHero.healthBonus - hDamage;
+      activeVillian.healthBonus = activeVillian.healthBonus - hDamage;
+      $("#battleground").append("<div class='" + "'> Your health has been reduced to" + activeHero.healthBonus+ "</div><div class='" + "'> Your enemy's health has been reduced to " + activeVillian.healthBonus);
+    }
 
 });
 });
