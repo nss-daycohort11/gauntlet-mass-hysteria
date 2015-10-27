@@ -81,6 +81,7 @@ $(document).ready(function() {
     var previousCard = $(this).attr("previous");
     $(".card").hide();
     $("." + previousCard).show();
+    printMessage.remove(message);
   });
 
 
@@ -108,5 +109,49 @@ $(document).ready(function() {
     }
 
 });
+
+
+var hideButton = $('#hide-button')
+ 
+ hideButton.click(function(e) {
+  var tally = ($(this).data('clicks') || 0) + 1;
+  if ( tally < 3 ) {
+    $(this).data('clicks', tally);
+    console.log(tally);
+  } else {
+  $("#grayedOut").prop("disabled", true);
+  $("#grayedOut").addClass("disable");
+  }
 });
+
+hideButton.click(function(e) {
+  var recoverHealth = 5;
+  // var addHealth = new window[$(this).healthBonus() + recoverHealth;
+  console.log (recoverHealth);
+});
+  // var recoverHealth = $(this.healthBonus) + 5;
+  // var notification = "<div>You have gained 5 health points back.  You now have </div>";
+  // console.log(recoverHealth);
+
+ });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
