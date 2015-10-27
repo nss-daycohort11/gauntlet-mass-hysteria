@@ -77,20 +77,19 @@ $(document).ready(function() {
     var previousCard = $(this).attr("previous");
     $(".card").hide();
     $("." + previousCard).show();
+    printMessage.remove(message);
   });
 
   var battle = $(".record");
   //function which records something in the battle record div, this will be used MANY TIMES later on. It takes an html string (string), and another string which will be a class name (css) so that I can make the rows in the battle record look different.
   var record = function (string, css) {
-<<<<<<< HEAD
+ HEAD
     battle.append("<div class='" + css + "'>" + string + "</div>")
 }
-=======
+// =======
     battle.append("<div class='" + css + "'>" + string + "</div>");
-  }
 
 
-
->>>>>>> 51dab9a0803258d0adbad72d6091c51939a35e3d
+// >>>>>>> 51dab9a0803258d0adbad72d6091c51939a35e3d
 });
 
