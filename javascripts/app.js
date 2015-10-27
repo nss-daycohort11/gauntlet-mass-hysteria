@@ -16,7 +16,7 @@ $(document).ready(function() {
   // console.log(sid.toString());
 
   var currentHHealth = activeHero.health+activeHero.healthBonus;
-  var currentVHealth = activeVillian.health + activeVillian.healthBonus;
+  var currentVHealth = activeVillian.health+activeVillian.healthBonus;
 
 
   /*
@@ -95,17 +95,17 @@ $(document).ready(function() {
       var vDamage = 2;
       // console.log(x.healthBonus);
     if (0 < y < .33){
-      activeHero.healthBonus = activeHero.healthBonus - hDamage;
-      $("#battleground").append("<div class='" + "'> Your health has been reduced to" + activeHero.healthBonus + "</div><div class='" + "'> You failed to injure the enemy. Their health remains strong at " + activeVillian.healthBonus);
+      currentHHealth = currentHHealth - hDamage;
+      $("#battleground").append("<div class='" + "'> Your health has been reduced to " + activeHero.healthBonus + "</div><div class='" + "'> You failed to injure the enemy. Their health remains strong at " + currentVHealth);
     }
     else if (.33 < y < .66){
-      activeVillian.healthBonus = activeVillian.healthBonus - hDamage;
-      $("#battleground").append("<div class='" + "'> The weakness of the enemy prevails. Your health remains " + activeHero.healthBonus + "</div><div class='" + "'> Your pathetic enemy's health has been reduced to " + activeVillian.healthBonus);
+      currentVHealth = currentVHealth - vDamage;
+      $("#battleground").append("<div class='" + "'> The weakness of the enemy prevails. Your health remains " + currentHHealth + "</div><div class='" + "'> Your pathetic enemy's health has been reduced to " +currentVHealth);
     }
     else if (y > .66){
-      activeHero.healthBonus = activeHero.healthBonus - hDamage;
-      activeVillian.healthBonus = activeVillian.healthBonus - hDamage;
-      $("#battleground").append("<div class='" + "'> Your health has been reduced to" + activeHero.healthBonus+ "</div><div class='" + "'> Your enemy's health has been reduced to " + activeVillian.healthBonus);
+      currentHHealth = currentHHealth - hDamage;
+      currentVHealth = currentVHealth - vDamage;
+      $("#battleground").append("<div class='" + "'> Your health has been reduced to " + currentHHealth+ "</div><div class='" + "'> Your enemy's health has been reduced to " + currentVHealth);
     }
 
 });

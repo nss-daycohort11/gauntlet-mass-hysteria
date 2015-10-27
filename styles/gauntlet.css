@@ -128,6 +128,16 @@ body {
   float: right;
 }
 
+#grayedOut.disable {
+  background-color: grey;
+  box-shadow: none;
+  border: 0;
+}
+
+#buttonrow > div {
+  float: left;
+}
+
 #insiderow div:first-child {
   margin-top: 0;
 }
