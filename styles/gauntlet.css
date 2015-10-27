@@ -76,6 +76,10 @@ body {
   margin: 15px auto 10px;
 }
 
+#villianrow {
+  margin: 0;
+}
+
 .card__button {
   font-size: 1.1em;
   margin: 30px 0 0 0;
@@ -86,6 +90,7 @@ body {
   width: 80%;
   margin: 2% auto 0;
   background-color: rgba(0,0,0,0.4);
+  border: 3px solid #505050;
   border-radius: 10px;
   color: #fff;
   padding: 3%;
@@ -94,6 +99,8 @@ body {
 #printMessage > img {
   float: left;
   width: 30%;
+  height: 300px;
+  border: 3px solid #505050;
   background-color: yellow;
 }
 
@@ -133,15 +140,13 @@ body {
   margin: 0 auto;
   width: 90%;
   text-align: center;
+}
 
-/*#grayedOut.disable {
+#grayedOut.disable {
   background-color: grey;
   box-shadow: none;
   border: 0;
-
-#buttonrow > div {
-  float: left;
-}*/
+}
 
 .btn {
   text-decoration: none;
