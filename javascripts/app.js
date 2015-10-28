@@ -145,7 +145,7 @@ $("#launch-game").click(function(e){
       else if (opponent.health <= 0){
 
       }
-      else $("#battletext").append("<div class='" + "'> "+opponent.name+"'s idiocy and clumsiness prevail, "+ playerName + "!! " +x.name+" is remains untouched, but is amused. Health is at" + x.health + ".</div><div class='" + "'> The pathetic "+opponent.name+"'s health has been reduced to " +opponent.health+".")
+      else $("#battletext").append("<div class='" + "'> "+opponent.name+"'s idiocy and clumsiness prevail, "+ playerName + "!! " +x.name+" is remains untouched, but is amused. Health is at " + x.health + ".</div><div class='" + "'> The pathetic "+opponent.name+"'s health has been reduced to " +opponent.health+".")
     }
     else if (y < 1){
       x.health = x.health - hDamage;
