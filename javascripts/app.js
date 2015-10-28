@@ -57,12 +57,19 @@ $(document).ready(function() {
         moveAlong = ($("#player-name").val() !== "");
         break;
 
+        // clearInput();
     }
+
+    // function clearInput() {
+    //   playerName.val = "";
+    //   console.log(playerName.val);
+    // } 
 
     if (moveAlong) {
       $(".card").hide();
       $("." + nextCard).show();
     }
+
   });
 
   $(".choice").click(function(e) {
@@ -70,7 +77,7 @@ $(document).ready(function() {
     var message = "<img src='images/" + x.name + ".jpg' class='charphoto'><div class='messageText'><h1>" + x.name + "</h1><p>" + x.name + " has the following traits:</p><ul><li>Health: " + x.healthBonus + "</li><li>Strength: " + x.strengthBonus + "</li><li>Weapon of Choice: " + x.weapon + "</li></ul><p>To save strength and restore some health, you can choose to hide, but remember ... you only have three hides to use!</p></div>";
     console.log(message);
     $("#printMessage").html(message);
-    CreateOpponent();
+    // CreateOpponent();
   });
 
 
@@ -82,7 +89,7 @@ $(document).ready(function() {
     var previousCard = $(this).attr("previous");
     $(".card").hide();
     $("." + previousCard).show();
-    printMessage.remove(message);
+    // printMessage.remove(message);
   });
 
 
@@ -149,7 +156,11 @@ hideButton.click(function(e) {
   });
 
 
+// Play Again
+  $("#playAgain").click(function(e) {
+    window.location.href= "../index.html";
 
+  })
 
  });
 
