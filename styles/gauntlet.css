@@ -50,9 +50,19 @@ body {
   text-transform: uppercase;
 }
 
-.card__prompt > img {
+.card__prompt > img,
+#gameOver img {
   width: 400px;
   margin: 40px;
+}
+
+#gameOver .blackbox {
+  text-align: center;
+  padding-bottom: 0;
+}
+
+#gameOverImage {
+  text-align: center;
 }
 
 .white {
@@ -61,7 +71,7 @@ body {
 }
 
 .blackbox {
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0,0,0,0.7);
   border: 3px solid #505050;
   border-radius: 10px;
   padding: 10px 0 30px;
@@ -70,7 +80,7 @@ body {
 }
 
 .heading {
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0,0,0,0.7);
   border: 3px solid #505050;
   border-radius: 10px;
   padding: 10px;
@@ -91,7 +101,7 @@ body {
 #printMessage {
   width: 80%;
   margin: 2% auto 0;
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0,0,0,0.7);
   border: 3px solid #505050;
   border-radius: 10px;
   color: #fff;
@@ -114,7 +124,8 @@ body {
   text-align: left;
 }
 
-.messageText > h1 {
+.messageText > h1,
+#gameOver h1 {
   font-size: 3em;
   font-weight: bold;
   margin: 0 0 20px;
@@ -139,11 +150,6 @@ body {
   background-color: grey;
   box-shadow: none;
   border: 0;
-}
-
-
-#buttonrow > div {
-  float: left;
 }
 
 #insiderow div:first-child {
