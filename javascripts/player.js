@@ -48,8 +48,8 @@ var Player = function(name) {
       " with ",
       this.health,
       " health. ",
-      (this.class.magical) ? "Able to cast " : " Wielding a ",
-      this.weapon.toString(),
+      // (this.class.magical) ? "Able to cast " : " Wielding a ",
+      // this.weapon.toString(),
       "!"
     ].join("");
     return output;
@@ -99,7 +99,7 @@ Hero.prototype = new Player();
   constructor function.
  */
 var Villian = function() {
-  this.health = this.health - 30;
+  this.health = this.health - 5;
   this.intelligence = this.intelligence -20;
   this.strength = this.strength + 30;
   this.allowedClasses = ["Sid", "Lotso", "Stinky Pete", "Pixar Lawyers"];

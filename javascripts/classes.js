@@ -72,8 +72,8 @@ Barbie.prototype = new Human();
 var Animal = function() {
   this.name = "Amimal";
   this.magical = true;
-  this.healthBonus = this.healthBonus - 10;
-  this.strengthBonus = this.strengthBonus - 20;
+  this.healthBonus = this.healthBonus + 10;
+  this.strengthBonus = this.strengthBonus + 20;
   this.intelligenceBonus = this.intelligenceBonus + 20;
 };
 Animal.prototype = new Toy();
