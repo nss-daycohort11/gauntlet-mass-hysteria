@@ -2,9 +2,6 @@
   Base function for a player, or enemy, class (profession)
  */
 var Toy = function() {
-  this.name = "Beggar";
-  this.healthBonus = 0;
-  this.strengthBonus = 0;
   this.intelligenceBonus = 0;
   this.magical = false;
 
