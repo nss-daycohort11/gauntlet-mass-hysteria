@@ -135,7 +135,7 @@ var x ={};
       else if (opponent.health <= 0){
         // Go to Game Over Winner Page
       }  
-      else $("#battletext").prepend("<div class='battleentry'><div>" + x.name + "'s health has been reduced to " + x.health + ", " + playerName + ". Not. Cool. </div><div>To make matters worse, you failed to injure stupid " + opponent.name + ", whose health remains strong at " + opponent.health + ".</div></div>")
+      else $("#battletext").prepend("<div class='battleentry'><div>" + x.name + "'s health has been reduced to " + x.health + ", " + playerName + ". Not. Cool.</div><div>To make matters worse, you failed to injure stupid " + opponent.name + ", whose health remains strong at " + opponent.health + ".</div></div>")
     }
     else if (y < .66){
       opponent.health = opponent.health - vDamage;
@@ -145,7 +145,7 @@ var x ={};
       else if (opponent.health <= 0){
 
       }
-      else $("#battletext").prepend("<div class='battleentry'><div>" + opponent.name + "'s idiocy and clumsiness prevail, " + playerName + "!! " + x.name + " is remains untouched, but is amused. Health is at " + x.health + ".</div><div>The pathetic " + opponent.name + "'s health has been reduced to " + opponent.health+  ".</div></div>")
+      else $("#battletext").prepend("<div class='battleentry'><div>" + opponent.name + "'s idiocy and clumsiness prevail, " + playerName + "!! " + x.name + " remains untouched, but is amused. Health is at " + x.health + ".</div><div>The pathetic " + opponent.name + "'s health has been reduced to " + opponent.health + ".</div></div>")
     }
     else if (y < 1){
       x.health = x.health - hDamage;
@@ -156,7 +156,7 @@ var x ={};
       else if (opponent.health <=0){
 
       }
-      else $("#battletext").prepend("<div class='battleentry'><div>" + x.name+"'s health has been reduced to " + x.health+ ", " + playerName + ".</div><div>" +opponent.name + "'s health has been reduced to a mere " + opponent.health + ".</div></div>")
+      else $("#battletext").prepend("<div class='battleentry'><div>" + x.name+"'s health has been reduced to " + x.health+ ", " + playerName + ".</div><div>" + opponent.name + "'s health has been reduced to a mere " + opponent.health + ".</div></div>")
     };
 
 });
@@ -195,6 +195,12 @@ hideButton.click(function(e) {
 
   });
 
+
+  // Play Again
+  $("#playAgain").click(function(e) {
+    window.location.href= "index.html";
+
+  })
 
  });
 
