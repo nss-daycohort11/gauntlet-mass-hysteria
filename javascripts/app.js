@@ -146,8 +146,9 @@ hideButton.click(function(e) {
 
         $("#battletext").append("<div class='" + "'> You've regained 5 health points, your current health is now " + currentHHealth + "</div><div class='" + "'> You now have " + numClicks + " hides left </div>");
 
-
   });
+
+
 
 
  });
