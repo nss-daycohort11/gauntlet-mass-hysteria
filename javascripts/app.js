@@ -158,9 +158,9 @@ hideButton.click(function(e) {
 
 // Play Again
   $("#playAgain").click(function(e) {
-    window.location.href= "../index.html";
+    window.location.href= "index.html";
 
-  })
+  });
 
  });
 
