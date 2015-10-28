@@ -52,7 +52,7 @@ console.log(opponent.health, opponent.name);
   $("#player-setup").show();
   $("#name-submit").click(function(e){
   playerName = $("#player-name").val();
-});
+  });
 
   /*
     When any button with card__link class is clicked,
@@ -112,9 +112,7 @@ var x ={};
 
 $("#launch-game").click(function(e){
   $("#battletext").html(opponent.name + " strikes! Make your move, player:")
-})
-
-
+});
 
 
  $("#attack-button").click(function(e){
@@ -130,32 +128,38 @@ $("#launch-game").click(function(e){
     if (y < .33){
       x.health = x.health - hDamage;
       if (x.health <= 0){
-        // Go to Game Over LOSER page
+        $(".card").hide();
+  $("#gameOver").show();
       }
       else if (opponent.health <= 0){
-        // Go to Game Over Winner Page
+        $(".card").hide();
+  $("#gameOver").show();
       }  
       else $("#battletext").append("<div class='" + "'> "+x.name+"'s health has been reduced to " + x.health + ", "+playerName+". Not. Cool. </div><div class='" + "'> To make matters worse, you failed to injure stupid "+opponent.name+", whose health remains strong at " + opponent.health + ".")
     }
     else if (y < .66){
       opponent.health = opponent.health - vDamage;
       if (x.health <= 0){
-
+        $(".card").hide();
+  $("#gameOver").show();
       }
       else if (opponent.health <= 0){
-
+        $(".card").hide();
+  $("#gameOver").show();
       }
-      else $("#battletext").append("<div class='" + "'> "+opponent.name+"'s idiocy and clumsiness prevail, "+ playerName + "!! " +x.name+" is remains untouched, but is amused. Health is at " + x.health + ".</div><div class='" + "'> The pathetic "+opponent.name+"'s health has been reduced to " +opponent.health+".")
+      else $("#battletext").append("<div class='" + "'> "+opponent.name+"'s idiocy and clumsiness prevail, "+ playerName + "!! " +x.name+" is remains untouched, but is amused. Health is at  " + x.health + ".</div><div class='" + "'> The pathetic "+opponent.name+"'s health has been reduced to " +opponent.health+".")
     }
     else if (y < 1){
       x.health = x.health - hDamage;
       opponent.health = opponent.health - vDamage;
       if (x.health <= 0){
-
+        $(".card").hide();
+  $("#gameOver").show();
       }
-      else if (opponent.health <=0){
-
-      }
+      else if (opponent.health <= 0){
+        $(".card").hide();
+  $("#gameOver").show();
+}
       else $("#battletext").append("<div class='" + "'> "+x.name+"'s health has been reduced to " + x.health+ ", "+playerName+".</div><div class='" + "'> "+opponent.name+"'s health has been reduced to a mere " + opponent.health+".")
     };
 
