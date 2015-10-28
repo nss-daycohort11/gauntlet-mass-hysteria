@@ -135,7 +135,7 @@ $("#launch-game").click(function(e){
       else if (opponent.health <= 0){
         // Go to Game Over Winner Page
       }  
-      else $("#battletext").append("<div class='" + "'> "+x.name+"'s health has been reduced to " + x.health + ", "+playerName+". Not. Cool. </div><div class='" + "'> To make matters worse, you failed to injure stupid "+opponent.name+", whose health remains strong at " + opponent.health + ".")
+      else $("#battletext").append("<div class='battleentry'><div>" + x.name + "'s health has been reduced to " + x.health + ", " + playerName + ". Not. Cool. </div><div>To make matters worse, you failed to injure stupid " + opponent.name + ", whose health remains strong at " + opponent.health + ".</div></div>")
     }
     else if (y < .66){
       opponent.health = opponent.health - vDamage;
@@ -145,7 +145,7 @@ $("#launch-game").click(function(e){
       else if (opponent.health <= 0){
 
       }
-      else $("#battletext").append("<div class='" + "'> "+opponent.name+"'s idiocy and clumsiness prevail, "+ playerName + "!! " +x.name+" is remains untouched, but is amused. Health is at " + x.health + ".</div><div class='" + "'> The pathetic "+opponent.name+"'s health has been reduced to " +opponent.health+".")
+      else $("#battletext").append("<div class='battleentry'><div>" + opponent.name + "'s idiocy and clumsiness prevail, " + playerName + "!! " + x.name + " is remains untouched, but is amused. Health is at " + x.health + ".</div><div>The pathetic " + opponent.name + "'s health has been reduced to " + opponent.health+  ".</div></div>")
     }
     else if (y < 1){
       x.health = x.health - hDamage;
@@ -156,7 +156,7 @@ $("#launch-game").click(function(e){
       else if (opponent.health <=0){
 
       }
-      else $("#battletext").append("<div class='" + "'> "+x.name+"'s health has been reduced to " + x.health+ ", "+playerName+".</div><div class='" + "'> "+opponent.name+"'s health has been reduced to a mere " + opponent.health+".")
+      else $("#battletext").append("<div class='battleentry'><div>" + x.name+"'s health has been reduced to " + x.health+ ", " + playerName + ".</div><div>" +opponent.name + "'s health has been reduced to a mere " + opponent.health + ".</div></div>")
     };
 
 });
@@ -190,7 +190,7 @@ hideButton.click(function(e) {
   x.health = x.health + recoverHealth;
   console.log (x.health);
 
-        $("#battletext").append("<div class='" + "'> You've regained 5 health points, your current health is now " + currentHHealth + "</div><div class='" + "'> You now have " + numClicks + " hides left </div>");
+        $("#battletext").prepend("<div class='battleentry'><div>You've regained 5 health points, your current health is now " + currentHHealth + "</div><div> You now have " + numClicks + " hides left.</div>");
 
 
   });
