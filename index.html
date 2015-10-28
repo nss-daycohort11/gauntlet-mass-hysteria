@@ -223,25 +223,22 @@
     </section>
 
     <section id="battleground" class="card card--battleground">
-   		<div class="card__button">
-	        <a class="card__link btn btn--big btn--orange" 
-	           href="#" 
-	           next="card--end">
-	          <span class="btn__prompt">></span>
-	          <span class="btn__text">End Game</span>
-	        </a>
-     	</div>
-		
+      <div id="battletext">
+        <div class="battleentry">
+          <span class="accent">LET THE BATTLE BEGIN!</span>
+        </div>
+      </div>
 
-	 	<div id= "attack-button" class="card__button">
+      <div id="insiderow">
+		
+	 	     <div id= "attack-button" class="card__button">
 	        <a class="card__attack btn btn--big btn--orange" 
 	           href="#" 
 	           next="card--end">
 	          <span class="btn__prompt">></span>
 	          <span class="btn__text">Attack!</span>
 	        </a>
-     	</div>
-
+     	  </div>
 
         <div id="hide-button" class="card__button">
 	        <a id="grayedOut" class="card__hide btn btn--big btn--orange" 
@@ -250,7 +247,19 @@
 	          <span class="btn__prompt">></span>
 	          <span class="btn__text">Hide</span>
 	        </a>
-     	</div>
+     	  </div>
+
+        <div class="card__button">
+          <a class="card__link btn btn--big btn--orange" 
+             href="#" 
+             next="card--end">
+            <span class="btn__prompt">></span>
+            <span class="btn__text">End Game</span>
+          </a>
+        </div>
+
+      </div>
+
 	</section>
 
     <section id="gameOver" class="card card--end">

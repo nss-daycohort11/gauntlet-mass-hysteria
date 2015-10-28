@@ -101,16 +101,16 @@ $("#launch-game").click(function(e){
       // console.log(x.healthBonus);
     if (y < .33){
       currentHHealth = currentHHealth - hDamage;
-      $("#battletext").append("<div class='" + "'> Your health has been reduced to " + activeHero.healthBonus + "</div><div class='" + "'> You failed to injure the enemy. Their health remains strong at " + currentVHealth);
+      $("#battletext").prepend("<div class='battleentry'><div>Your health has been reduced to " + activeHero.healthBonus + "</div><div>You failed to injure the enemy. Their health remains strong at " + currentVHealth + ".");
     }
     else if (y < .66){
       currentVHealth = currentVHealth - vDamage;
-      $("#battletext").append("<div class='" + "'> The weakness of the enemy prevails. Your health remains " + currentHHealth + "</div><div class='" + "'> Your pathetic enemy's health has been reduced to " +currentVHealth);
+      $("#battletext").prepend("<div class='battleentry'><div>The weakness of the enemy prevails. Your health remains " + currentHHealth + "</div><div>Your pathetic enemy's health has been reduced to " +currentVHealth + ".");
     }
     else if (y < 1){
       currentHHealth = currentHHealth - hDamage;
       currentVHealth = currentVHealth - vDamage;
-      $("#battletext").append("<div class='" + "'> Your health has been reduced to " + currentHHealth+ "</div><div class='" + "'> Your enemy's health has been reduced to " + currentVHealth);
+      $("#battletext").prepend("<div class='battleentry'><div>Your health has been reduced to " + currentHHealth+ "</div><div>Your enemy's health has been reduced to " + currentVHealth + ".");
     }
 
 });
@@ -144,7 +144,7 @@ hideButton.click(function(e) {
   currentHHealth = recoverHealth + currentHHealth;
   console.log (currentHHealth);
 
-        $("#battletext").append("<div class='" + "'> You've regained 5 health points, your current health is now " + currentHHealth + "</div><div class='" + "'> You now have " + numClicks + " hides left </div>");
+        $("#battletext").prepend("<div class='battleentry'><div>You've regained 5 health points, your current health is now " + currentHHealth + "</div><div> You now have " + numClicks + " hides left.</div>");
 
 
   });
