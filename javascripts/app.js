@@ -10,19 +10,37 @@ $(document).ready(function() {
   // x.generateClass();  // This will be used for "Surprise me" option
   // console.log(buzz.toString());
 
-  var activeVillian = new Villian();
-  activeVillian.generateClass();
-  activeVillian.setWeapon(new BroadSword());
+var opponent = {};
+function CreateOpponent(){
+  var y = Math.random();
+  if (y<.33){
+    opponent= new Sid();
+  }
+  else if (y<.66){
+    opponent= new Lotso();
+  }
+  else if (y<1){
+    opponent= new Scud();
+  }  
+return opponent;
+}
+CreateOpponent();
+
+console.log(opponent.health, opponent.name);
+
+  // var activeVillian = new Villian();
+  // activeVillian.generateClass();
+  // activeVillian.setWeapon(new BroadSword());
   // console.log(sid.toString());
 
-  var currentHHealth = activeHero.health+activeHero.healthBonus;
-  var currentVHealth = activeVillian.health+activeVillian.healthBonus;
+  // var currentHHealth = activeHero.health+activeHero.healthBonus;
+  // var currentVHealth = activeVillian.health+activeVillian.healthBonus;
 
 
   /*
     Test code to generate a spell
    */
-  var spell = new Sphere();
+  // var spell = new Sphere();
   // console.log("spell: ", spell.toString());
 
 
@@ -32,8 +50,9 @@ $(document).ready(function() {
     Show the initial view that accepts player name
    */
   $("#player-setup").show();
-  var playerName = $("#player-name").val();
-
+  $("#name-submit").click(function(e){
+  playerName = $("#player-name").val();
+});
 
   /*
     When any button with card__link class is clicked,
@@ -64,13 +83,18 @@ $(document).ready(function() {
       $("." + nextCard).show();
     }
   });
-
+var currentHHealth;
+var currentHHealthBonus;
+var currentName;
+var x ={};
   $(".choice").click(function(e) {
-    var x= new window[$(this).children()[1].innerHTML]();
+      x= new window[$(this).children()[1].innerHTML]();
     var message = "<img src='images/" + x.name + ".jpg' class='charphoto'><div class='messageText'><h1>" + x.name + "</h1><p>" + x.name + " has the following traits:</p><ul><li>Health: " + x.healthBonus + "</li><li>Strength: " + x.strengthBonus + "</li><li>Weapon of Choice: " + x.weapon + "</li></ul><p>To save strength and restore some health, you can choose to hide, but remember ... you only have three hides to use!</p></div>";
     console.log(message);
     $("#printMessage").html(message);
-    CreateOpponent();
+    currentHHealth = x.health;
+    currentHHealthBonus = x.healthBonus;
+    currentName=x.name;
   });
 
 
@@ -87,31 +111,53 @@ $(document).ready(function() {
 
 
 $("#launch-game").click(function(e){
-  $("#battletext").html(Opponent + "strikes! Make your move, player:")
+  $("#battletext").html(opponent.name + " strikes! Make your move, player:")
 })
 
 
+
+
  $("#attack-button").click(function(e){
-    var battlestring =""; 
+    // var battlestring =""; 
     var y = Math.random();
       
       // The two variables below will be modified to reflect a more complex battle algorithm.
-      var hDamage = 2;
-      var vDamage = 2;
+      var hDamage = (opponent.strength+opponent.strengthBonus)/5;
+      hDamage = Math.floor(hDamage);
+      var vDamage = (x.strength+x.strengthBonus)/3;
+      vDamage = Math.floor(vDamage);
       // console.log(x.healthBonus);
     if (y < .33){
-      currentHHealth = currentHHealth - hDamage;
-      $("#battletext").append("<div class='" + "'> Your health has been reduced to " + activeHero.healthBonus + "</div><div class='" + "'> You failed to injure the enemy. Their health remains strong at " + currentVHealth);
+      x.health = x.health - hDamage;
+      if (x.health <= 0){
+        // Go to Game Over LOSER page
+      }
+      else if (opponent.health <= 0){
+        // Go to Game Over Winner Page
+      }  
+      else $("#battletext").append("<div class='" + "'> "+x.name+"'s health has been reduced to " + x.health + ", "+playerName+". Not. Cool. </div><div class='" + "'> To make matters worse, you failed to injure stupid "+opponent.name+", whose health remains strong at " + opponent.health + ".")
     }
     else if (y < .66){
-      currentVHealth = currentVHealth - vDamage;
-      $("#battletext").append("<div class='" + "'> The weakness of the enemy prevails. Your health remains " + currentHHealth + "</div><div class='" + "'> Your pathetic enemy's health has been reduced to " +currentVHealth);
+      opponent.health = opponent.health - vDamage;
+      if (x.health <= 0){
+
+      }
+      else if (opponent.health <= 0){
+
+      }
+      else $("#battletext").append("<div class='" + "'> "+opponent.name+"'s idiocy and clumsiness prevail, "+ playerName + "!! " +x.name+" is remains untouched, but is amused. Health is at" + x.health + ".</div><div class='" + "'> The pathetic "+opponent.name+"'s health has been reduced to " +opponent.health+".")
     }
     else if (y < 1){
-      currentHHealth = currentHHealth - hDamage;
-      currentVHealth = currentVHealth - vDamage;
-      $("#battletext").append("<div class='" + "'> Your health has been reduced to " + currentHHealth+ "</div><div class='" + "'> Your enemy's health has been reduced to " + currentVHealth);
-    }
+      x.health = x.health - hDamage;
+      opponent.health = opponent.health - vDamage;
+      if (x.health <= 0){
+
+      }
+      else if (opponent.health <=0){
+
+      }
+      else $("#battletext").append("<div class='" + "'> "+x.name+"'s health has been reduced to " + x.health+ ", "+playerName+".</div><div class='" + "'> "+opponent.name+"'s health has been reduced to a mere " + opponent.health+".")
+    };
 
 });
 
@@ -139,10 +185,10 @@ var numClicks = 3
  // Determines gained health, adds to current health and notifies player
 
 hideButton.click(function(e) {
-  console.log(currentHHealth);
+  console.log(x.health);
   var recoverHealth = 5;
-  currentHHealth = recoverHealth + currentHHealth;
-  console.log (currentHHealth);
+  x.health = x.health + recoverHealth;
+  console.log (x.health);
 
         $("#battletext").append("<div class='" + "'> You've regained 5 health points, your current health is now " + currentHHealth + "</div><div class='" + "'> You now have " + numClicks + " hides left </div>");
 

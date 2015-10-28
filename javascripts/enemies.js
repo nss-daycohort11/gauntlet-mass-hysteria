@@ -116,5 +116,5 @@ var Zurg = function() {
   }
 };
 
-Zurg.prototype = new Villian();
+Scud.prototype = new Villian();
 
