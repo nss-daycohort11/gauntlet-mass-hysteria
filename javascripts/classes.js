@@ -23,6 +23,7 @@ var Buzz = function() {
   this.name = "Buzz";
   this.healthBonus = this.healthBonus + 25;
   this.strengthBonus = this.strengthBonus + 30;
+  this.weapon = "Laser";
 };
 Buzz.prototype = new Human();
 
@@ -31,6 +32,7 @@ var Woody = function() {
   this.name = "Woody";
   this.healthBonus = this.healthBonus + 20;
   this.strengthBonus = this.strengthBonus + 10;
+  this.weapon = "Sheriff's badge";
 };
 Woody.prototype = new Human();
 
@@ -46,6 +48,7 @@ var Jessie = function() {
   this.name = "Jessie";
   this.healthBonus = this.healthBonus + 35;
   this.strengthBonus = this.strengthBonus + 20;
+  this.weapon = "Laso";
 };
 Jessie.prototype = new Human();
 
@@ -54,6 +57,7 @@ var Barbie = function() {
   this.name = "Barbie";
   this.healthBonus = this.healthBonus + 10;
   this.strengthBonus = this.strengthBonus + 40;
+  this.weapon = "High-heeled Shoe";
 };
 Barbie.prototype = new Human();
 
@@ -80,6 +84,7 @@ var Rex = function() {
   this.healthBonus = this.healthBonus + 5;
   this.strengthBonus = this.strengthBonus - 10;
   this.intelligenceBonus = this.intelligenceBonus + 20;
+  this.weapon = "Teeth";
 };
 Rex.prototype = new Animal();
 
@@ -97,6 +102,7 @@ var Slinky = function() {
   this.name = "Slinky";
   this.strengthBonus = this.strengthBonus - 10;
   this.intelligenceBonus = this.intelligenceBonus + 10;
+  this.weapon = "Coils";
 };
 Slinky.prototype = new Animal();
 

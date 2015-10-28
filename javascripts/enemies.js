@@ -2,6 +2,7 @@ var Sid = function() {
   this.health = this.health + 20;
   this.name = "Sid";
   this.allowedClasses = ["Buzz", "Jessie", "Rex"];
+  this.weapon = "Dynamite";
 
   this.generateClass = function() {
     // Get a random index from the allowed classes array
@@ -22,6 +23,7 @@ var Lotso = function() {
   this.health = this.health + 20;
   this.name = "Lotso";
   this.allowedClasses = ["Buzz", "Jessie", "Rex"];
+  this.weapon = "Cane";
 
   this.generateClass = function() {
     // Get a random index from the allowed classes array
@@ -82,6 +84,7 @@ var Scud = function() {
   this.health = this.health + 20;
   this.name = "Scud";
   this.allowedClasses = ["Buzz", "Jessie", "Rex"];
+  this.weapon = "Claws";
 
   this.generateClass = function() {
     // Get a random index from the allowed classes array
